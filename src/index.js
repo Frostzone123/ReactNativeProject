@@ -1,15 +1,8 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import Page from './containers/page'
-import './style/main.css'
-import configureStore from './redux/store/configure-store'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './containers/App';
+import registerServiceWorker from './registerServiceWorker';
 
-const store = configureStore()
 
-render(
-  <Provider store={store}>
-    <Page />
-  </Provider>,
-  document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();
